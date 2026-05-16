@@ -1,0 +1,207 @@
+---
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Déploiement Windows industrialisé — Portfolio</title>
+    <meta
+      name="description"
+      content="Fiche projet anonymisée : préparation et déploiement industrialisé de postes Windows."
+    />
+  </head>
+
+  <body>
+    <main class="page">
+      <a href="/" class="back">← Retour au portfolio</a>
+
+      <section class="hero">
+        <p class="eyebrow">Fiche réalisation</p>
+        <h1>Déploiement Windows industrialisé</h1>
+        <p class="intro">
+          Préparation d’un environnement Windows homogène, reproductible et prêt à l’emploi,
+          avec validation du déploiement sur plusieurs postes.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Situation</h2>
+          <p>
+            Une organisation devait moderniser plusieurs postes de travail et réduire le temps
+            nécessaire à l’installation de nouveaux équipements.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Tâche</h2>
+          <p>
+            Préparer un environnement Windows standardisé, adapté aux besoins utilisateurs,
+            puis rendre le processus de déploiement reproductible.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Action</h2>
+          <p>
+            Une image Windows personnalisée a été préparée, enrichie avec les applications
+            nécessaires, intégrée à une solution de déploiement réseau, puis testée sur plusieurs
+            machines.
+          </p>
+        </article>
+
+        <article class="card result">
+          <h2>Résultat</h2>
+          <p>
+            Les postes obtenus sont homogènes, prêts à l’emploi, joints à l’environnement cible
+            et plus rapides à préparer. Le processus est documenté et réutilisable.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Compétences mobilisées</h2>
+        <div class="skills">
+          <span>Windows 11</span>
+          <span>Masterisation</span>
+          <span>Déploiement réseau</span>
+          <span>Applications standards</span>
+          <span>Automatisation</span>
+          <span>Documentation technique</span>
+        </div>
+      </section>
+
+      <section class="section note">
+        <h2>Ce que cette réalisation démontre</h2>
+        <p>
+          Cette réalisation montre ma capacité à transformer une installation poste à poste en
+          processus plus industriel, cohérent et maintenable.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    --bg: #07111f;
+    --panel: #101d2f;
+    --panel-light: #16263d;
+    --text: #eef5ff;
+    --muted: #a8b7cc;
+    --accent: #38bdf8;
+    --accent-2: #22c55e;
+    --border: rgba(255, 255, 255, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 30rem),
+      var(--bg);
+    color: var(--text);
+  }
+
+  .page {
+    width: min(1040px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 3rem 0 5rem;
+  }
+
+  .back {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .back:hover {
+    color: var(--accent);
+  }
+
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    max-width: 850px;
+    margin: 1rem 0;
+    font-size: clamp(2.5rem, 7vw, 4.8rem);
+    line-height: 0.95;
+  }
+
+  .intro {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .card,
+  .note {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, var(--panel-light), var(--panel));
+  }
+
+  .card h2,
+  .section h2 {
+    margin-top: 0;
+  }
+
+  .card p,
+  .note p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .result {
+    border-color: rgba(34, 197, 94, 0.35);
+  }
+
+  .section {
+    margin-top: 2rem;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .skills span {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    padding: 0.65rem 0.9rem;
+    border-radius: 999px;
+  }
+
+  @media (max-width: 720px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

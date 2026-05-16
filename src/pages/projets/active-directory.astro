@@ -1,0 +1,263 @@
+---
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Infrastructure Active Directory — Portfolio</title>
+    <meta
+      name="description"
+      content="Fiche projet anonymisée : mise en place et optimisation d’une infrastructure Active Directory."
+    />
+  </head>
+
+  <body>
+    <main class="page">
+      <a href="/" class="back">← Retour au portfolio</a>
+
+      <section class="hero">
+        <p class="eyebrow">Fiche réalisation</p>
+        <h1>Infrastructure Active Directory</h1>
+        <p class="intro">
+          Mise en place d’un environnement centralisé pour gérer les utilisateurs,
+          les postes, les services réseau, les ressources partagées et les accès.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Situation</h2>
+          <p>
+            Une organisation devait centraliser la gestion de son environnement
+            informatique afin de mieux administrer ses utilisateurs, ses postes,
+            ses ressources réseau et ses services internes.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Tâche</h2>
+          <p>
+            Déployer une infrastructure d’annuaire cohérente, fournir les services
+            réseau essentiels, organiser les accès aux ressources et intégrer des
+            postes clients dans un environnement administré.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Action</h2>
+          <p>
+            Un domaine centralisé a été mis en place avec une organisation claire
+            de l’annuaire, des groupes de sécurité, des partages contrôlés, des
+            stratégies appliquées aux utilisateurs et aux postes, ainsi qu’une
+            intégration avec des services Windows et Linux.
+          </p>
+        </article>
+
+        <article class="card result">
+          <h2>Résultat</h2>
+          <p>
+            L’environnement obtenu permet une authentification centralisée, une
+            administration plus lisible, des ressources mieux protégées et une
+            gestion plus fiable des postes et utilisateurs.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Compétences mobilisées</h2>
+        <div class="skills">
+          <span>Windows Server</span>
+          <span>Active Directory</span>
+          <span>DNS</span>
+          <span>DHCP</span>
+          <span>GPO</span>
+          <span>Partages SMB</span>
+          <span>Permissions NTFS</span>
+          <span>Linux</span>
+          <span>LDAP</span>
+          <span>Documentation</span>
+        </div>
+      </section>
+
+      <section class="section details">
+        <h2>Points clés valorisables</h2>
+
+        <div class="list">
+          <p>
+            <strong>Centralisation :</strong> comptes utilisateurs, postes clients,
+            groupes et ressources organisés dans un annuaire commun.
+          </p>
+          <p>
+            <strong>Sécurité :</strong> droits d’accès appliqués par groupes,
+            séparation des ressources et application de règles de configuration.
+          </p>
+          <p>
+            <strong>Interopérabilité :</strong> intégration de services Linux dans
+            un environnement principalement Windows.
+          </p>
+          <p>
+            <strong>Validation :</strong> tests de connexion, accès aux ressources,
+            restrictions et comportement des postes clients.
+          </p>
+        </div>
+      </section>
+
+      <section class="section note">
+        <h2>Ce que cette réalisation démontre</h2>
+        <p>
+          Cette réalisation démontre ma capacité à construire un socle
+          d’infrastructure complet : annuaire, réseau, accès utilisateurs,
+          postes clients, services internes et documentation technique.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    --bg: #07111f;
+    --panel: #101d2f;
+    --panel-light: #16263d;
+    --text: #eef5ff;
+    --muted: #a8b7cc;
+    --accent: #38bdf8;
+    --accent-2: #22c55e;
+    --border: rgba(255, 255, 255, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 30rem),
+      radial-gradient(circle at top right, rgba(34, 197, 94, 0.12), transparent 26rem),
+      var(--bg);
+    color: var(--text);
+  }
+
+  .page {
+    width: min(1040px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 3rem 0 5rem;
+  }
+
+  .back {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .back:hover {
+    color: var(--accent);
+  }
+
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    color: var(--accent);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    max-width: 900px;
+    margin: 1rem 0;
+    font-size: clamp(2.5rem, 7vw, 4.8rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+  }
+
+  h2 {
+    margin-top: 0;
+    line-height: 1.1;
+  }
+
+  .intro {
+    max-width: 780px;
+    color: var(--muted);
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .card,
+  .note,
+  .details {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, var(--panel-light), var(--panel));
+  }
+
+  .card p,
+  .note p,
+  .details p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .result {
+    border-color: rgba(34, 197, 94, 0.35);
+  }
+
+  .section {
+    margin-top: 2rem;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .skills span {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    padding: 0.65rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+
+  .list {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .list p {
+    margin: 0;
+  }
+
+  strong {
+    color: var(--text);
+  }
+
+  @media (max-width: 720px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -3,32 +3,38 @@ const projects = [
   {
     title: "Déploiement Windows industrialisé",
     tags: "Windows · Masterisation · Déploiement réseau",
-    result: "Postes prêts à l’emploi, homogènes et reproductibles."
+    result: "Postes prêts à l’emploi, homogènes et reproductibles.",
+    href: "/projets/deploiement-windows"
   },
   {
     title: "Infrastructure Active Directory",
     tags: "Windows Server · AD · DNS · DHCP · GPO",
-    result: "Authentification centralisée, ressources partagées et annuaire structuré."
+    result: "Authentification centralisée, ressources partagées et annuaire structuré.",
+    href: "/projets/active-directory"
   },
   {
     title: "Automatisation PowerShell",
     tags: "PowerShell · Active Directory · CSV · Logs",
-    result: "Tâches répétitives automatisées et actions mieux tracées."
+    result: "Tâches répétitives automatisées et actions mieux tracées.",
+    href: "/projets/powershell"
   },
   {
     title: "Réseau LAN segmenté et sécurisé",
     tags: "VLAN · ACL · SSH · Port Security",
-    result: "Réseau fonctionnel, filtré, documenté et validé."
+    result: "Réseau fonctionnel, filtré, documenté et validé.",
+    href: "/projets/reseau-lan-securise"
   },
   {
     title: "Supervision, sauvegarde et exploitation",
     tags: "Inventaire · Sauvegarde · Supervision · MCO",
-    result: "Meilleure visibilité du SI et restauration des données validée."
+    result: "Meilleure visibilité du SI et restauration des données validée.",
+    href: "/projets/supervision-sauvegarde"
   },
   {
     title: "Support utilisateurs et environnement IT/OT",
     tags: "Ticketing · Diagnostic · Documentation · IT/OT",
-    result: "Incidents traités avec méthode, traçabilité et communication adaptée."
+    result: "Incidents traités avec méthode, traçabilité et communication adaptée.",
+    href: "/projets/support-it-ot"
   }
 ];
 ---
@@ -47,8 +53,10 @@ const projects = [
   <body>
     <main class="page">
       <section class="hero">
-        <p class="eyebrow">Portfolio professionnel</p>
+        <p class="eyebrow">Portfolio professionnel anonymisé</p>
+
         <h1>Technicien informatique systèmes, réseaux et support</h1>
+
         <p class="intro">
           Réalisations autour de l’administration systèmes, de la sécurisation réseau,
           du support utilisateur, de l’automatisation, de la supervision et de
@@ -63,6 +71,7 @@ const projects = [
 
       <section id="competences" class="section">
         <h2>Compétences principales</h2>
+
         <div class="skills">
           <span>Windows Server</span>
           <span>Active Directory</span>
@@ -78,20 +87,35 @@ const projects = [
       </section>
 
       <section id="projets" class="section">
-        <h2>Réalisations sélectionnées</h2>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Réalisations</p>
+            <h2>Projets sélectionnés</h2>
+          </div>
+
+          <p class="section-intro">
+            Une sélection de réalisations anonymisées, présentées sous l’angle des
+            résultats, des compétences mobilisées et de la valeur apportée.
+          </p>
+        </div>
+
         <div class="grid">
           {projects.map((project) => (
-            <article class="card">
+            <a class="card" href={project.href}>
               <p class="tags">{project.tags}</p>
               <h3>{project.title}</h3>
               <p>{project.result}</p>
-            </article>
+              <span class="card-link">Voir la fiche →</span>
+            </a>
           ))}
         </div>
       </section>
 
       <section class="section about">
-        <h2>Positionnement</h2>
+        <p class="eyebrow">Positionnement</p>
+
+        <h2>Une approche orientée exploitation et amélioration continue</h2>
+
         <p>
           Profil orienté fiabilité, sécurité, documentation et qualité de service.
           Capacité à intervenir du poste utilisateur jusqu’à l’infrastructure, avec
@@ -119,10 +143,19 @@ const projects = [
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     font-family:
-      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
       sans-serif;
     background:
       radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 32rem),
@@ -138,29 +171,48 @@ const projects = [
   }
 
   .hero {
+    min-height: 72vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 4rem 0 5rem;
   }
 
   .eyebrow {
+    margin: 0 0 1rem;
     color: var(--accent);
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     font-size: 0.8rem;
   }
 
   h1 {
-    max-width: 850px;
+    max-width: 950px;
     margin: 1rem 0;
-    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-size: clamp(3rem, 8vw, 6rem);
     line-height: 0.95;
+    letter-spacing: -0.06em;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin: 0 0 1.5rem;
+  }
+
+  h3 {
+    margin: 0.75rem 0;
+    font-size: 1.25rem;
+    line-height: 1.2;
   }
 
   .intro {
-    max-width: 760px;
+    max-width: 850px;
     color: var(--muted);
     font-size: 1.25rem;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
   .actions {
@@ -174,14 +226,24 @@ const projects = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
-    padding: 0.75rem 1rem;
+    min-height: 46px;
+    padding: 0.8rem 1.15rem;
     border: 1px solid var(--border);
     border-radius: 999px;
     color: var(--text);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
     background: rgba(255, 255, 255, 0.04);
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.45);
+    background: rgba(255, 255, 255, 0.07);
   }
 
   .button.primary {
@@ -191,12 +253,22 @@ const projects = [
   }
 
   .section {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 
-  h2 {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+  .section-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: end;
     margin-bottom: 1.5rem;
+  }
+
+  .section-intro {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin: 0 0 1.5rem;
   }
 
   .skills {
@@ -211,6 +283,7 @@ const projects = [
     color: var(--text);
     padding: 0.65rem 0.9rem;
     border-radius: 999px;
+    font-weight: 700;
   }
 
   .grid {
@@ -220,17 +293,25 @@ const projects = [
   }
 
   .card {
-    min-height: 220px;
+    display: block;
+    min-height: 240px;
     padding: 1.5rem;
     border: 1px solid var(--border);
     border-radius: 1.25rem;
     background: linear-gradient(180deg, var(--panel-light), var(--panel));
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    color: var(--text);
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
   }
 
-  .card h3 {
-    margin: 0.75rem 0;
-    font-size: 1.25rem;
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.45);
+    background: linear-gradient(180deg, #1b2f4d, var(--panel));
   }
 
   .card p {
@@ -241,24 +322,37 @@ const projects = [
   .tags {
     color: var(--accent) !important;
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 800;
+    margin: 0 0 0.75rem;
+  }
+
+  .card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 800;
   }
 
   .about {
-    max-width: 850px;
+    max-width: 900px;
     padding: 2rem;
     border: 1px solid var(--border);
     border-radius: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
   }
 
-  .about p {
+  .about p:last-child {
     color: var(--muted);
     font-size: 1.1rem;
     line-height: 1.8;
+    margin-bottom: 0;
   }
 
   @media (max-width: 900px) {
+    .section-heading {
+      grid-template-columns: 1fr;
+    }
+
     .grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -270,11 +364,16 @@ const projects = [
     }
 
     .hero {
-      padding-top: 2rem;
+      min-height: auto;
+      padding-top: 3rem;
     }
 
     .grid {
       grid-template-columns: 1fr;
+    }
+
+    .card {
+      min-height: auto;
     }
   }
 </style>
