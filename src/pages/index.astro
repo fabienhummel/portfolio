@@ -1,40 +1,42 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const projects = [
   {
     title: "Déploiement Windows industrialisé",
     tags: "Windows · Masterisation · Déploiement réseau",
     result: "Postes prêts à l’emploi, homogènes et reproductibles.",
-    href: "/projets/deploiement-windows"
+    href: `${base}projets/deploiement-windows`
   },
   {
     title: "Infrastructure Active Directory",
     tags: "Windows Server · AD · DNS · DHCP · GPO",
     result: "Authentification centralisée, ressources partagées et annuaire structuré.",
-    href: "/projets/active-directory"
+    href: `${base}projets/active-directory`
   },
   {
     title: "Automatisation PowerShell",
     tags: "PowerShell · Active Directory · CSV · Logs",
     result: "Tâches répétitives automatisées et actions mieux tracées.",
-    href: "/projets/powershell"
+    href: `${base}projets/powershell`
   },
   {
     title: "Réseau LAN segmenté et sécurisé",
     tags: "VLAN · ACL · SSH · Port Security",
     result: "Réseau fonctionnel, filtré, documenté et validé.",
-    href: "/projets/reseau-lan-securise"
+    href: `${base}projets/reseau-lan-securise`
   },
   {
     title: "Supervision, sauvegarde et exploitation",
     tags: "Inventaire · Sauvegarde · Supervision · MCO",
     result: "Meilleure visibilité du SI et restauration des données validée.",
-    href: "/projets/supervision-sauvegarde"
+    href: `${base}projets/supervision-sauvegarde`
   },
   {
     title: "Support utilisateurs et environnement IT/OT",
     tags: "Ticketing · Diagnostic · Documentation · IT/OT",
     result: "Incidents traités avec méthode, traçabilité et communication adaptée.",
-    href: "/projets/support-it-ot"
+    href: `${base}projets/support-it-ot`
   }
 ];
 ---
