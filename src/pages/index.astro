@@ -1,17 +1,280 @@
 ---
-
+const projects = [
+  {
+    title: "Déploiement Windows industrialisé",
+    tags: "Windows · Masterisation · Déploiement réseau",
+    result: "Postes prêts à l’emploi, homogènes et reproductibles."
+  },
+  {
+    title: "Infrastructure Active Directory",
+    tags: "Windows Server · AD · DNS · DHCP · GPO",
+    result: "Authentification centralisée, ressources partagées et annuaire structuré."
+  },
+  {
+    title: "Automatisation PowerShell",
+    tags: "PowerShell · Active Directory · CSV · Logs",
+    result: "Tâches répétitives automatisées et actions mieux tracées."
+  },
+  {
+    title: "Réseau LAN segmenté et sécurisé",
+    tags: "VLAN · ACL · SSH · Port Security",
+    result: "Réseau fonctionnel, filtré, documenté et validé."
+  },
+  {
+    title: "Supervision, sauvegarde et exploitation",
+    tags: "Inventaire · Sauvegarde · Supervision · MCO",
+    result: "Meilleure visibilité du SI et restauration des données validée."
+  },
+  {
+    title: "Support utilisateurs et environnement IT/OT",
+    tags: "Ticketing · Diagnostic · Documentation · IT/OT",
+    result: "Incidents traités avec méthode, traçabilité et communication adaptée."
+  }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Portfolio — Technicien informatique</title>
+    <meta
+      name="description"
+      content="Portfolio professionnel anonymisé — Technicien informatique systèmes, réseaux et support"
+    />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Portfolio professionnel anonymisé</p>
+        <h1>Technicien informatique systèmes, réseaux et support</h1>
+        <p class="intro">
+          Réalisations autour de l’administration systèmes, de la sécurisation réseau,
+          du support utilisateur, de l’automatisation, de la supervision et de
+          l’amélioration continue du système d’information.
+        </p>
+
+        <div class="actions">
+          <a href="#projets" class="button primary">Voir les réalisations</a>
+          <a href="#competences" class="button">Compétences clés</a>
+        </div>
+      </section>
+
+      <section id="competences" class="section">
+        <h2>Compétences principales</h2>
+        <div class="skills">
+          <span>Windows Server</span>
+          <span>Active Directory</span>
+          <span>Linux</span>
+          <span>PowerShell</span>
+          <span>Réseaux LAN</span>
+          <span>VLAN / ACL</span>
+          <span>Supervision</span>
+          <span>Sauvegarde</span>
+          <span>Support IT/OT</span>
+          <span>Documentation</span>
+        </div>
+      </section>
+
+      <section id="projets" class="section">
+        <h2>Réalisations sélectionnées</h2>
+        <div class="grid">
+          {projects.map((project) => (
+            <article class="card">
+              <p class="tags">{project.tags}</p>
+              <h3>{project.title}</h3>
+              <p>{project.result}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="section about">
+        <h2>Positionnement</h2>
+        <p>
+          Profil orienté fiabilité, sécurité, documentation et qualité de service.
+          Capacité à intervenir du poste utilisateur jusqu’à l’infrastructure, avec
+          une approche pragmatique : comprendre le besoin, stabiliser l’existant,
+          documenter les actions et proposer des améliorations concrètes.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
+
+<style>
+  :root {
+    --bg: #07111f;
+    --panel: #101d2f;
+    --panel-light: #16263d;
+    --text: #eef5ff;
+    --muted: #a8b7cc;
+    --accent: #38bdf8;
+    --accent-2: #22c55e;
+    --border: rgba(255, 255, 255, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 32rem),
+      radial-gradient(circle at top right, rgba(34, 197, 94, 0.16), transparent 28rem),
+      var(--bg);
+    color: var(--text);
+  }
+
+  .page {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+
+  .hero {
+    padding: 4rem 0 5rem;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    max-width: 850px;
+    margin: 1rem 0;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 0.95;
+  }
+
+  .intro {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .button.primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #03101e;
+    border: 0;
+  }
+
+  .section {
+    margin-top: 3rem;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .skills span {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    padding: 0.65rem 0.9rem;
+    border-radius: 999px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    min-height: 220px;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, var(--panel-light), var(--panel));
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  }
+
+  .card h3 {
+    margin: 0.75rem 0;
+    font-size: 1.25rem;
+  }
+
+  .card p {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .tags {
+    color: var(--accent) !important;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .about {
+    max-width: 850px;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .about p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page {
+      padding: 2rem 0;
+    }
+
+    .hero {
+      padding-top: 2rem;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
